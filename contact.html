@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rizwan Ahmad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .contact-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-link:hover {
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+        .form-input {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                    <i data-feather="database" class="mr-2"></i>
+                    Rizwan Ahmad
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white transition duration-300">Home</a>
+                    <a href="about.html" class="nav-link text-white transition duration-300">About</a>
+                    <a href="skills.html" class="nav-link text-white transition duration-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-white transition duration-300">Projects</a>
+                    <a href="contact.html" class="nav-link text-blue-400 transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-white" id="menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-900/95 z-40 backdrop-blur-lg">
+        <div class="flex flex-col items-center justify-center h-full">
+            <button class="absolute top-6 right-6 text-white" id="close-menu">
+                <i data-feather="x"></i>
+            </button>
+            <a href="index.html" class="text-2xl font-medium text-white py-4 transition duration-300">Home</a>
+            <a href="about.html" class="text-2xl font-medium text-white py-4 transition duration-300">About</a>
+            <a href="skills.html" class="text-2xl font-medium text-white py-4 transition duration-300">Skills</a>
+            <a href="projects.html" class="text-2xl font-medium text-white py-4 transition duration-300">Projects</a>
+            <a href="contact.html" class="text-2xl font-medium text-blue-400 py-4 transition duration-300">Contact</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="min-h-screen pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 text-center" data-aos="fade-up">
+                Get In <span class="text-blue-400">Touch</span>
+            </h1>
+            
+            <p class="text-xl text-center mb-16 max-w-2xl mx-auto text-gray-300" data-aos="fade-up">
+                Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+            </p>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="contact-card rounded-2xl p-8">
+                        <h2 class="text-2xl font-bold mb-8">Send me a message</h2>
+                        
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block mb-2 font-medium">Your Name</label>
+                                <input type="text" id="name" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block mb-2 font-medium">Email Address</label>
+                                <input type="email" id="email" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block mb-2 font-medium">Subject</label>
+                                <input type="text" id="subject" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block mb-2 font-medium">Your Message</label>
+                                <textarea id="message" rows="6" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="contact-card rounded-2xl p-8 h-full">
+                        <h2 class="text-2xl font-bold mb-8">Contact Information</h2>
+                        
+                        <div class="space-y-6 mb-12">
+                            <div class="flex items-start">
+                                <div class="bg-blue-900/50 p-3 rounded-full mr-4">
+                                    <i data-feather="mail" class="text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Email</h3>
+                                    <a href="mailto:rizwan@example.com" class="text-gray-300 hover:text-blue-400 transition">rizwantech.19@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-900/50 p-3 rounded-full mr-4">
+                                    <i data-feather="phone" class="text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Phone</h3>
+                                    <a href="tel:+919911689510" class="text-gray-300 hover:text-blue-400 transition">+91 9911689510, +91 8542090500</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-900/50 p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Location</h3>
+                                    <p class="text-gray-300">New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-bold mb-6">Connect with me</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-900/50 hover:bg-blue-800 p-3 rounded-full transition">
+                                    <i data-feather="linkedin" class="text-blue-400"></i>
+                                </a>
+                                <a href="#" class="bg-blue-900/50 hover:bg-blue-800 p-3 rounded-full transition">
+                                    <i data-feather="github" class="text-blue-400"></i>
+                                </a>
+                                <a href="#" class="bg-blue-900/50 hover:bg-blue-800 p-3 rounded-full transition">
+                                    <i data-feather="twitter" class="text-blue-400"></i>
+                                </a>
+                                <a href="#" class="bg-blue-900/50 hover:bg-blue-800 p-3 rounded-full transition">
+                                    <i data-feather="instagram" class="text-blue-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Thanks for your message, ${name}! I'll get back to you soon.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>

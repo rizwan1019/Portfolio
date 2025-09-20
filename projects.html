@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rizwan Ahmad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .nav-link:hover {
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+        .filter-btn.active {
+            background-color: #1e40af;
+            color: white;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                    <i data-feather="database" class="mr-2"></i>
+                    Rizwan Ahmad
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white transition duration-300">Home</a>
+                    <a href="about.html" class="nav-link text-white transition duration-300">About</a>
+                    <a href="skills.html" class="nav-link text-white transition duration-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-blue-400 transition duration-300">Projects</a>
+                    <a href="contact.html" class="nav-link text-white transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-white" id="menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-900/95 z-40 backdrop-blur-lg">
+        <div class="flex flex-col items-center justify-center h-full">
+            <button class="absolute top-6 right-6 text-white" id="close-menu">
+                <i data-feather="x"></i>
+            </button>
+            <a href="index.html" class="text-2xl font-medium text-white py-4 transition duration-300">Home</a>
+            <a href="about.html" class="text-2xl font-medium text-white py-4 transition duration-300">About</a>
+            <a href="skills.html" class="text-2xl font-medium text-white py-4 transition duration-300">Skills</a>
+            <a href="projects.html" class="text-2xl font-medium text-blue-400 py-4 transition duration-300">Projects</a>
+            <a href="contact.html" class="text-2xl font-medium text-white py-4 transition duration-300">Contact</a>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="min-h-screen pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 text-center" data-aos="fade-up">
+                My <span class="text-blue-400">Projects</span>
+            </h1>
+            
+            <p class="text-xl text-center mb-12 max-w-2xl mx-auto text-gray-300" data-aos="fade-up">
+                Here are some of my selected data analysis projects. Each project demonstrates my ability to extract insights from complex datasets.
+            </p>
+            
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
+                <button class="filter-btn active bg-blue-600 text-white px-4 py-2 rounded-full transition" data-filter="all">All</button>
+                <button class="filter-btn bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-full transition" data-filter="python">Python</button>
+                <button class="filter-btn bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-full transition" data-filter="sql">SQL</button>
+                <button class="filter-btn bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-full transition" data-filter="tableau">Tableau</button>
+                <button class="filter-btn bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-full transition" data-filter="machine-learning">Machine Learning</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700" data-aos="flip-up" data-category="python machine-learning">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/1" alt="Customer Churn Prediction" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="project-details.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Python</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Scikit-learn</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Pandas</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Customer Churn Prediction</h3>
+                        <p class="text-gray-300 mb-4">Developed a predictive model to identify customers likely to churn with 89% accuracy, helping reduce churn by 27%.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="project-details.html" class="text-blue-400 hover:text-blue-300 flex items-center transition">
+                                Read more <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700" data-aos="flip-up" data-aos-delay="100" data-category="sql tableau">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/finance/640x360/2" alt="Sales Performance Dashboard" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="project-details.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">SQL</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Tableau</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">ETL</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Sales Performance Dashboard</h3>
+                        <p class="text-gray-300 mb-4">Created an interactive Tableau dashboard for sales data analysis, reducing reporting time by 65% and improving decision-making.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="project-details.html" class="text-blue-400 hover:text-blue-300 flex items-center transition">
+                                Read more <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700" data-aos="flip-up" data-aos-delay="200" data-category="python machine-learning">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/health/640x360/3" alt="Health Insurance Cost Prediction" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="project-details.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Python</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Regression</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Feature Engineering</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Health Insurance Cost Prediction</h3>
+                        <p class="text-gray-300 mb-4">Built a regression model to predict health insurance costs based on demographic and health factors with 87% accuracy.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="project-details.html" class="text-blue-400 hover:text-blue-300 flex items-center transition">
+                                Read more <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700" data-aos="flip-up" data-aos-delay="300" data-category="sql">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/database/640x360/4" alt="Database Optimization" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="project-details.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">SQL</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Database</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Performance</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Database Optimization</h3>
+                        <p class="text-gray-300 mb-4">Optimized a 10TB customer database, reducing query times by 92% through schema redesign and indexing strategy.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="project-details.html" class="text-blue-400 hover:text-blue-300 flex items-center transition">
+                                Read more <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700" data-aos="flip-up" data-aos-delay="400" data-category="tableau">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/analytics/640x360/5" alt="Marketing Campaign Analysis" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="project-details.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Tableau</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">A/B Testing</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Visualization</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Marketing Campaign Analysis</h3>
+                        <p class="text-gray-300 mb-4">Analyzed marketing campaign performance across multiple channels, visualized ROI and recommended optimal budget allocation.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="project-details.html" class="text-blue-400 hover:text-blue-300 flex items-center transition">
+                                Read more <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700" data-aos="flip-up" data-aos-delay="500" data-category="python">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="http://static.photos/statistics/640x360/6" alt="Credit Risk Assessment" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="project-details.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Python</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Classification</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Risk Analysis</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Credit Risk Assessment</h3>
+                        <p class="text-gray-300 mb-4">Developed a credit risk model that improved loan approval accuracy by 35% while reducing default rates by 28%.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="project-details.html" class="text-blue-400 hover:text-blue-300 flex items-center transition">
+                                Read more <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        // Filter projects
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
+                button.classList.add('active', 'bg-blue-600', 'text-white');
+                
+                const filter = button.dataset.filter;
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

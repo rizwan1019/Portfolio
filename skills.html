@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Rizwan Ahmad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            background-color: #1e40af;
+            transform: scale(1.05);
+        }
+        .nav-link:hover {
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                    <i data-feather="database" class="mr-2"></i>
+                    Rizwan Ahmad
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white transition duration-300">Home</a>
+                    <a href="about.html" class="nav-link text-white transition duration-300">About</a>
+                    <a href="skills.html" class="nav-link text-blue-400 transition duration-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-white transition duration-300">Projects</a>
+                    <a href="contact.html" class="nav-link text-white transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-white" id="menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-900/95 z-40 backdrop-blur-lg">
+        <div class="flex flex-col items-center justify-center h-full">
+            <button class="absolute top-6 right-6 text-white" id="close-menu">
+                <i data-feather="x"></i>
+            </button>
+            <a href="index.html" class="text-2xl font-medium text-white py-4 transition duration-300">Home</a>
+            <a href="about.html" class="text-2xl font-medium text-white py-4 transition duration-300">About</a>
+            <a href="skills.html" class="text-2xl font-medium text-blue-400 py-4 transition duration-300">Skills</a>
+            <a href="projects.html" class="text-2xl font-medium text-white py-4 transition duration-300">Projects</a>
+            <a href="contact.html" class="text-2xl font-medium text-white py-4 transition duration-300">Contact</a>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="min-h-screen pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-16 text-center" data-aos="fade-up">
+                My <span class="text-blue-400">Skills</span>
+            </h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Technical Skills -->
+                <div data-aos="fade-right">
+                    <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+                        <div class="flex items-center mb-8">
+                            <div class="bg-blue-900/50 p-3 rounded-full mr-4">
+                                <i data-feather="code" class="text-blue-400"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">Technical Skills</h2>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Python</span>
+                                    <span class="text-blue-400">95%</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="progress-bar h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">SQL</span>
+                                    <span class="text-blue-400">90%</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="progress-bar h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">R</span>
+                                    <span class="text-blue-400">85%</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="progress-bar h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Tableau</span>
+                                    <span class="text-blue-400">92%</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-2">
+                                    <div class="progress-bar h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Technologies -->
+                <div data-aos="fade-left">
+                    <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+                        <div class="flex items-center mb-8">
+                            <div class="bg-blue-900/50 p-3 rounded-full mr-4">
+                                <i data-feather="tool" class="text-blue-400"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">Tools & Technologies</h2>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Pandas</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">NumPy</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Scikit-learn</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">TensorFlow</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Power BI</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Excel</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Jupyter</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Git</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">AWS</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Google Cloud</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Docker</div>
+                            <div class="skill-pill bg-slate-700 px-4 py-2 rounded-full">Spark</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Analysis Skills -->
+                <div data-aos="fade-right">
+                    <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+                        <div class="flex items-center mb-8">
+                            <div class="bg-blue-900/50 p-3 rounded-full mr-4">
+                                <i data-feather="bar-chart-2" class="text-blue-400"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">Data Analysis</h2>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Exploratory Data Analysis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Statistical Analysis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Predictive Modeling</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Data Cleaning & Wrangling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div data-aos="fade-left">
+                    <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+                        <div class="flex items-center mb-8">
+                            <div class="bg-blue-900/50 p-3 rounded-full mr-4">
+                                <i data-feather="users" class="text-blue-400"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">Soft Skills</h2>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Data Storytelling</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Problem Solving</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Critical Thinking</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Communication</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check" class="text-green-400 mr-3"></i>
+                                <span>Team Collaboration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

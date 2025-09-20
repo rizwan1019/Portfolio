@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Rizwan Ahmad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .project-feature {
+            transition: all 0.3s ease;
+        }
+        .project-feature:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link:hover {
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                    <i data-feather="database" class="mr-2"></i>
+                    Rizwan Ahmad
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white transition duration-300">Home</a>
+                    <a href="about.html" class="nav-link text-white transition duration-300">About</a>
+                    <a href="skills.html" class="nav-link text-white transition duration-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-blue-400 transition duration-300">Projects</a>
+                    <a href="contact.html" class="nav-link text-white transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-white" id="menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-900/95 z-40 backdrop-blur-lg">
+        <div class="flex flex-col items-center justify-center h-full">
+            <button class="absolute top-6 right-6 text-white" id="close-menu">
+                <i data-feather="x"></i>
+            </button>
+            <a href="index.html" class="text-2xl font-medium text-white py-4 transition duration-300">Home</a>
+            <a href="about.html" class="text-2xl font-medium text-white py-4 transition duration-300">About</a>
+            <a href="skills.html" class="text-2xl font-medium text-white py-4 transition duration-300">Skills</a>
+            <a href="projects.html" class="text-2xl font-medium text-blue-400 py-4 transition duration-300">Projects</a>
+            <a href="contact.html" class="text-2xl font-medium text-white py-4 transition duration-300">Contact</a>
+        </div>
+    </div>
+
+    <!-- Project Details Section -->
+    <section class="min-h-screen pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <a href="projects.html" class="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition" data-aos="fade-up">
+                <i data-feather="arrow-left" class="mr-2"></i> Back to Projects
+            </a>
+            
+            <div class="mb-12" data-aos="fade-up">
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="text-sm bg-blue-900/50 text-blue-300 px-4 py-1 rounded-full">Python</span>
+                    <span class="text-sm bg-blue-900/50 text-blue-300 px-4 py-1 rounded-full">Machine Learning</span>
+                    <span class="text-sm bg-blue-900/50 text-blue-300 px-4 py-1 rounded-full">Scikit-learn</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Customer Churn Prediction</h1>
+                <p class="text-xl text-gray-300 max-w-3xl">Developed a predictive model to identify customers likely to churn with 89% accuracy, helping reduce churn by 27%.</p>
+            </div>
+            
+            <div class="relative rounded-2xl overflow-hidden mb-16 h-96" data-aos="fade-up">
+                <img src="http://static.photos/technology/640x360/1" alt="Customer Churn Prediction" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8">
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition duration-300">
+                            <i data-feather="github" class="mr-2"></i> View Code
+                        </a>
+                        <a href="#" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-2 rounded-lg font-medium transition duration-300">
+                            <i data-feather="external-link" class="mr-2"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+                <div class="lg:col-span-2">
+                    <div data-aos="fade-right">
+                        <h2 class="text-2xl font-bold mb-6">Project Overview</h2>
+                        <div class="space-y-4 text-gray-300">
+                            <p>This project involved developing a machine learning model to predict customer churn for a telecom company. The goal was to identify customers who were likely to cancel their subscriptions, allowing the company to take proactive retention measures.</p>
+                            
+                            <p>The dataset contained information on customer demographics, account details, services subscribed, and churn status. After thorough exploratory data analysis and feature engineering, several machine learning models were evaluated, with the Gradient Boosting Classifier achieving the highest accuracy.</p>
+                            
+                            <p>The final model achieved 89% accuracy in predicting churn, with a recall of 92% for the churn class (important for identifying as many potential churners as possible). When implemented, this solution reduced actual churn by 27% over six months, saving the company an estimated $1.2M annually.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-2xl font-bold mb-6">Project Details</h2>
+                    <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold mb-2">Client</h3>
+                                <p class="text-gray-300">Major Telecom Company</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Role</h3>
+                                <p class="text-gray-300">Lead Data Analyst</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Technologies</h3>
+                                <p class="text-gray-300">Python, Pandas, Scikit-learn, XGBoost, Matplotlib</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Date</h3>
+                                <p class="text-gray-300">June 2023</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Category</h3>
+                                <p class="text-gray-300">Machine Learning, Predictive Analytics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up">
+                <h2 class="text-2xl font-bold mb-6">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="project-feature bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-900/50 p-2 rounded-full mr-4">
+                                <i data-feather="activity" class="text-blue-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Advanced Feature Engineering</h3>
+                        </div>
+                        <p class="text-gray-300">Created meaningful features from raw data like tenure categories, service bundling indicators, and usage patterns that significantly improved model performance.</p>
+                    </div>
+                    
+                    <div class="project-feature bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-900/50 p-2 rounded-full mr-4">
+                                <i data-feather="trending-up" class="text-blue-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Class Imbalance Handling</h3>
+                        </div>
+                        <p class="text-gray-300">Implemented several techniques including SMOTE, class weights, and stratified sampling to effectively handle the imbalanced dataset (15% churn rate).</p>
+                    </div>
+                    
+                    <div class="project-feature bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-900/50 p-2 rounded-full mr-4">
+                                <i data-feather="shuffle" class="text-blue-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Model Interpretability</h3>
+                        </div>
+                        <p class="text-gray-300">Used SHAP values to explain model predictions, providing business stakeholders with understandable insights into factors driving churn predictions.</p>
+                    </div>
+                    
+                    <div class="project-feature bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-900/50 p-2 rounded-full mr-4">
+                                <i data-feather="sliders" class="text-blue-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Threshold Optimization</h3>
+                        </div>
+                        <p class="text-gray-300">Performed cost-sensitive analysis to determine the optimal prediction probability threshold that balanced accuracy with business objectives.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16" data-aos="fade-up">
+                <h2 class="text-2xl font-bold mb-6">Project Gallery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="rounded-xl overflow-hidden h-48">
+                        <img src="http://static.photos/analytics/640x360/7" alt="Feature Importance" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48">
+                        <img src="http://static.photos/analytics/640x360/8" alt="Confusion Matrix" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48">
+                        <img src="http://static.photos/analytics/640x360/9" alt="SHAP Visualization" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-16 border-t border-slate-700" data-aos="fade-up">
+                <h2 class="text-2xl font-bold mb-8 text-center">Have a Similar Project?</h2>
+                <div class="text-center">
+                    <a href="contact.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium text-lg transition duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
